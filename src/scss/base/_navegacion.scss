@@ -1,0 +1,48 @@
+@use 'variables' as var;
+
+.navegacion-principal {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem 4rem;
+	position: sticky;
+	top: 0;
+	background-color: var.$blanco;
+}
+.logo img {
+	width: 50px;
+	height: auto;
+}
+.navegacion a {
+	text-decoration: none;
+	color: var.$celeste;
+	font-size: 1.8rem;
+	font-weight: 500;
+	margin-right: 1rem;
+	transition: color .4s ease;
+	font-family: var.$fuente;
+	display: none;
+}
+.navegacion a:last-of-type {
+	margin: 0;
+}
+@media screen and ( min-width: 768px ) {
+	.navegacion a {
+		display: inline-flex;
+	}
+}
+.navegacion a:hover {
+	color: var.$celesteOscuro;
+}
+.navegacion i {
+	color: var.$negro;
+	margin-left: 3rem;
+	font-size: 2rem;
+}
+.navegacion i:hover {
+	cursor: pointer;
+}
+.navegacion .activo {
+	border-bottom: 2px solid var.$celeste;
+	width: auto;
+}

@@ -1,0 +1,31 @@
+@use 'variables' as var;
+.hero {
+	background-image: url('../../../build/img/hero.jpg');
+	background-size: cover;
+	background-position: right top;
+	height: calc(100vh - 7rem);
+	width: 100%;
+	position: relative;
+}
+@media screen and (min-width: 768px) {
+	.hero {
+		background-position: center center;
+		background-repeat: no-repeat;
+	}
+}
+.hero img {
+	display: none;
+}
+@media screen and ( min-width: 768px ) {
+	.hero img {
+		display: block;
+		background-color: var.$blanco;
+		border-radius: 50% 50%;
+		position: absolute;
+		top: calc(50% - 50px);
+		left: calc(50% - 50px);
+		width: 12rem;
+		max-width: 100%;
+		height: 12rem;
+	}
+}
